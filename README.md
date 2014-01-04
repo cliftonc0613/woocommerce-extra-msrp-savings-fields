@@ -16,3 +16,15 @@ Woocommerce Extra MSRP Savings Fields is a Wordpress plugin for WooCommerce. It 
 1. Install and activate the plugin
 2. Edit/create a new product
 3. Add MSRP and Savings(optional) into the newly created fields under Price
+
+###Screenshots
+
+* Front end (Product view)
+
+![Front end (Product view)](img/frontend_productview.png?raw=true)
+* Front end (Shop view)
+
+![Front end (Shop view)](img/frontend_shopview.png?raw=true)
+* Back end (Product create/edit view)
+
+![Back end (Product create/edit view)](img/backend.png?raw=true)
