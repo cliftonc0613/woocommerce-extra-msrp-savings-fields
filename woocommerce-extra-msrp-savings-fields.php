@@ -56,6 +56,7 @@ function add_custom_price_front($p, $obj) {
 
     $link = get_permalink($post_id);
     $msrp = get_post_meta($post_id, '_msrp', true);
+    $savings = get_post_meta($post_id, '_savings', true);
     $price = get_post_meta($post_id, '_regular_price', true);
     $sale = get_post_meta($post_id, '_sale_price', true);
 
@@ -72,15 +73,17 @@ function add_custom_price_front($p, $obj) {
     if (empty($savings)) {
         if (!empty($sale) && !empty($msrp)) {
             if ($sale < $msrp) {
-                $savings= round( (($msrp - $sale) / $msrp * 100), 2);
+                $savings= round( (($msrp - $sale) / $msrp * 100), 0);
                 $additional_price.= "<br><$tag style='color:red;' class='price_savings'> $savings% off</$tag>";
             }
         } elseif (!empty($price) && !empty($msrp)){
             if ($price < $msrp) {
-                $savings= round( (($msrp - $price) / $msrp * 100), 2);
+                $savings= round( (($msrp - $price) / $msrp * 100), 0);
                 $additional_price.= "<br><$tag style='color:red;' class='price_savings'> $savings% off</$tag>";
             }
         }
+    } else { 
+        $additional_price.= "<br><$tag style='color:red;' class='price_savings'> $savings% off</$tag>";
     }
 
     return "<a href='$link'>" . $p . $additional_price . "</a>";
