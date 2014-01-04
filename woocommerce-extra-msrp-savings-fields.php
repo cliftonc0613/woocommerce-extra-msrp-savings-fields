@@ -4,8 +4,8 @@
   Description: Adds MSRP and Savings fields to products prices
   Based on: woocommerce-extra-price-fields by Aman Saini
   Author: Peter Song
-  Author URI: psonghi@gmail.com
-  Plugin URI: github.com/deepthunk/woocommerce-extra-msrp-savings-fields
+  Author URI: http://github.com/deepthunk/
+  Plugin URI: http://github.com/deepthunk/woocommerce-extra-msrp-savings-fields
   Version: 1.0
   Requires at least: WP: 3.0.0; WC: 2.0.0
   Tested on: WP: 3.8; WC: 2.0.20
