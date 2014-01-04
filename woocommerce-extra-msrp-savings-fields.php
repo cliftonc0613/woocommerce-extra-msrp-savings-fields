@@ -73,12 +73,12 @@ function add_custom_price_front($p, $obj) {
         if (!empty($sale) && !empty($msrp)) {
             if ($sale < $msrp) {
                 $savings= round( (($msrp - $sale) / $msrp * 100), 2);
-                $additional_price.= "<br><$tag style='font-size:80%;color:red;' class='price_savings'> $savings% off</$tag>";
+                $additional_price.= "<br><$tag style='color:red;' class='price_savings'> $savings% off</$tag>";
             }
         } elseif (!empty($price) && !empty($msrp)){
             if ($price < $msrp) {
                 $savings= round( (($msrp - $price) / $msrp * 100), 2);
-                $additional_price.= "<br><$tag style='font-size:80%;color:red;' class='price_savings'> $savings% off</$tag>";
+                $additional_price.= "<br><$tag style='color:red;' class='price_savings'> $savings% off</$tag>";
             }
         }
     }
